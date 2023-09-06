@@ -52,35 +52,6 @@
     #price {
       font-size: 2rem;
     }
-
-    div {
-      button {
-        @extend .button-component;
-        font-size: 1.6rem;
-        background: $wine;
-        color: $white;
-        &:hover {
-          transform: none;
-          box-shadow: none;
-        }
-
-        &:first-child {
-          border-radius: 5rem 0 0 5rem;
-          border-right-width: 0;
-        }
-        &:last-child {
-          border-radius: 0 5rem 5rem 0;
-          border-left-width: 0;
-        }
-      }
-
-      input {
-        @extend .input-component;
-        font-size: 1.6rem;
-        width: 5rem;
-        text-align: center;
-      }
-    }
   }
 
   .buttons-container {

@@ -5,20 +5,31 @@
   @include touchable;
 
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 1rem;
+  padding: 6px 10px 6px 6px;
   margin: 6px;
   width: 100%;
 
   .subcontainer {
+    width: 100%;
     display: flex;
     flex-direction: column;
-    align-items: end;
+    align-items: start;
+    margin-left: 15px;
     gap: 5px;
+
+    .row1 {
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .row2 {
+      
+    }
   }
 
   img {
     width: 5rem;
+    border: $border-config;
   }
 }

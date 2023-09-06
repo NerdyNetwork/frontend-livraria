@@ -1,6 +1,7 @@
 import { useBookInfos } from './useBookInfos';
 
 import styles from "./styles.module.scss";
+import { AmountControllerItem } from '../../components/AmountControllerItem';
 
 export const BookInfos = () => {
   const { amount, setAmount, data, handleAddToCart, bookImage } = useBookInfos();
@@ -18,25 +19,7 @@ export const BookInfos = () => {
             <hr />
             <div id={styles["price-amount"]}>
               <span id={styles.price}>R$ 35,90</span>
-              <div>
-                <button onClick={() => setAmount(Math.max(1, amount - 1))}>
-                  -
-                </button>
-                <input
-                  min={1}
-                  max={999}
-                  type="number"
-                  value={amount}
-                  onChange={(ev) =>
-                    setAmount(
-                      Math.min(999, Math.max(1, parseInt(ev.target.value)))
-                    )
-                  }
-                />
-                <button onClick={() => setAmount(Math.min(999, amount + 1))}>
-                  +
-                </button>
-              </div>
+              <AmountControllerItem amount={amount} setAmount={setAmount} />
             </div>
             <div className={styles["buttons-container"]}>
               <button onClick={() => handleAddToCart()}>Adicionar ao carrinho</button>
