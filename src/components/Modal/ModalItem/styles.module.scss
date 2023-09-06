@@ -2,12 +2,23 @@
 @import "../../../sass/mixins.scss";
 
 .container {
+  @include touchable;
+
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   padding: 1rem;
   margin: 6px;
   width: 100%;
 
-  @include touchable;
+  .subcontainer {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    gap: 5px;
+  }
+
+  img {
+    width: 5rem;
+  }
 }
