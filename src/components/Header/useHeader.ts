@@ -6,7 +6,6 @@ export const useHeader = () => {
 
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  
   return {
     navigate, 
     isModalOpen, 

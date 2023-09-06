@@ -1,0 +1,13 @@
+@import "./variables.scss";
+
+@mixin touchable {
+  border: $border-config;
+  box-shadow: $box-shadow-config;
+  cursor: pointer;
+  transition: .1s all;
+
+  &:hover {
+    transform: translate(-.1rem, -.1rem);
+    box-shadow: 0.288rem 0.288rem;
+  }
+}

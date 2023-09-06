@@ -1,30 +1,22 @@
-import { ReactNode } from 'react';
+import { ModalBase } from "../ModalBase";
+import { ModalItem } from "./ModalItem";
 
-import styles from './styles.module.scss';
+export const Modal = (props) => {
+  if (!props.isModalOpen) {
+    return <></>;
+  }
 
-type ModalProps = {
-  onClose: () => void;
-  children: ReactNode;
-}
-
-export const Modal = ({ onClose, children }: ModalProps) => {
-  const closeModal = () => {
-    onClose();
-  };
+  const debug = [
+    <ModalItem />,
+    <ModalItem />,
+    <ModalItem />,
+    <ModalItem />,
+    <ModalItem />,
+  ];
 
   return (
-    <div className={styles["modal"]}>
-      <div className={styles["modal-content"]}>
-        <div className={styles["modal-content-column"]}>
-          {children}
-        </div>
-        
-        <div className={styles["header-content"]}>
-          <button className={styles["close-button"]} onClick={closeModal}>
-            X
-          </button>
-        </div>
-      </div>
-    </div>
+    <ModalBase onClose={() => props.setIsModalOpen(false)}>
+      {debug.map((v) => v)}
+    </ModalBase>
   );
 };
