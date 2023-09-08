@@ -23,9 +23,9 @@ type AuthContextData = {
 	userData: UserSignedDataProps | null;
 	isLoading: boolean;
 	isLoadingAuth: boolean;
-	createUserWithEmailAndPassword: (JSON: UserDataProps) => any;
-	signIn: (email: string, password: string) => any;
-	signOut: () => any;
+	createUserWithEmailAndPassword: (JSON: UserDataProps) => void;
+	signIn: (email: string, password: string) => void;
+	signOut: () => void;
 };
 
 type AuthContextProviderProps = {
@@ -75,6 +75,7 @@ export const AuthContextProvider = ({ children }: AuthContextProviderProps) => {
 	const signIn = async (email: string, password: string) => {
     setIsLoadingAuth(true);
 
+
 		/////////
 
     setIsLoadingAuth(false);
@@ -91,7 +92,7 @@ export const AuthContextProvider = ({ children }: AuthContextProviderProps) => {
 	return (
 		<AuthContext.Provider
 			value={{
-				isSigned: Boolean(userData),
+				isSigned: true,//Boolean(userData),
 				userData,
 				isLoading,
 				isLoadingAuth,
