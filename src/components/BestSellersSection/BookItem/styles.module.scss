@@ -1,0 +1,34 @@
+@import "../../../sass/variables.scss";
+@import "../../../sass/mixins.scss";
+@import "../../../sass/components.scss";
+
+.item {
+  @include touchable;
+  background-color: #fff;
+  padding: 1rem;
+  
+  img {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  p {
+    margin-bottom: 7px;
+  }
+  
+  .title {
+    @extend .title-component;
+    font-size: 1.2rem;
+  }
+  
+  .price {
+    font-size: 1.3rem;
+    font-weight: 900;
+  }
+
+  button {
+    @extend .button-black-component;
+    width: 100%;
+    font-size: 1.3rem;
+  }
+}

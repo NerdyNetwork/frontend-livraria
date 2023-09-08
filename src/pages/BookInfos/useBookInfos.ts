@@ -3,7 +3,7 @@ import { Cart } from "../../types/Cart";
 import bookImage from "../../assets/bookimage.jpeg";
 
 export const useBookInfos = () => {
-  const [amount, setAmount] = useState(1);
+  const [amount, setAmount] = useState<number>(1);
 
   const data = {
     id: "1",
