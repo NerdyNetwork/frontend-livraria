@@ -1,8 +1,14 @@
+import { Dispatch } from "react";
 import { ModalBase } from "../ModalBase";
 import { ModalItem } from "./ModalItem";
 
-export const Modal = (props) => {
-  if (!props.isModalOpen) {
+type ModalProps = {
+  isModalOpen: boolean,
+  setIsModalOpen: Dispatch<boolean>,
+};
+
+export const Modal = ({ isModalOpen, setIsModalOpen } : ModalProps)  => {
+  if (!isModalOpen) {
     return <></>;
   }
 
@@ -15,7 +21,7 @@ export const Modal = (props) => {
   ];
 
   return (
-    <ModalBase onClose={() => props.setIsModalOpen(false)}>
+    <ModalBase onClose={() => setIsModalOpen(false)}>
       {debug.map((v) => v)}
     </ModalBase>
   );

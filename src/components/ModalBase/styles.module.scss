@@ -40,6 +40,10 @@
     }
 
     .header-content {
+      button {
+        @extend .button-component;
+      }
+      
       .close-button {
         @extend .title-component;
         font-size: 1rem;

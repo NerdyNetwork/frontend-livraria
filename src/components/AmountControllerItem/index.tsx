@@ -1,8 +1,19 @@
+import { Dispatch } from "react";
 import styles from "./styles.module.scss";
 
-export const AmountControllerItem = ({ amount, setAmount }) => {
+type AmountControllerItemProps = {
+  amount: number;
+  setAmount: Dispatch<number>;
+  size?: "small" | "normal";
+};
+
+export const AmountControllerItem = ({
+  amount,
+  setAmount,
+  size = "normal",
+}: AmountControllerItemProps) => {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${styles[`${size}-size`]}`}>
       <button onClick={() => setAmount(Math.max(1, amount - 1))}>-</button>
       <input
         min={1}

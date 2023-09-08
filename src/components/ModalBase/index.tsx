@@ -5,7 +5,7 @@ import styles from './styles.module.scss';
 type ModalBaseProps = {
   onClose: () => void;
   children: ReactNode;
-}
+};
 
 export const ModalBase = ({ onClose, children }: ModalBaseProps) => {
   const closeModalBase = () => {

@@ -16,15 +16,15 @@
   background: #fff;
   border: $border-config;
   padding: 3rem;
-}
-
-input {
-  @extend .input-component;
-  font-size: 1.6rem;
-}
-
-button {
-  @extend .button-component;
-  font-size: 1.6rem;
-  margin-top: .5rem;
+  
+  input {
+    @extend .input-component;
+    font-size: 1.6rem;
+  }
+  
+  button {
+    @extend .button-component;
+    font-size: 1.6rem;
+    margin-top: .5rem;
+  }
 }
