@@ -2,9 +2,10 @@ import { Player } from "@lottiefiles/react-lottie-player";
 import { useHome } from './useHome';
 
 import styles from "./styles.module.scss";
+import { BestSellersSection } from "../../components/BestSellersSection";
 
 export const Home = () => {
-  const { navigate, spamPhrases, books } = useHome();
+  const { navigate, spamPhrases } = useHome();
 
   return (
     <div>
@@ -42,19 +43,7 @@ export const Home = () => {
         </p>
       </div>
 
-      <section className={styles["container-2"]}>
-        <h1 className={styles.title}>Livros mais vendidos</h1>
-        <div className={styles.subcontainer}>
-          {books.map((book, i) => (
-            <img
-            key={i}
-            src={book.image}
-            alt={book.alt}
-            onClick={() => navigate(`/books/${book.id}}`)}
-            />
-          ))}
-        </div>
-      </section>
+      <BestSellersSection />
     </div>
   );
 };

@@ -36,6 +36,14 @@
   }
 }
 
+.button-black-component {
+  @extend .button-component;
+
+  background-color: #000;
+  color: #fff;
+  border-radius: 0;
+}
+
 .div-horizontal {
   display: flex;
   
