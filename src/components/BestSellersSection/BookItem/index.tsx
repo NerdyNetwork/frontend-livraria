@@ -1,7 +1,7 @@
 import { useNavigate } from "react-router-dom";
 import styles from "./styles.module.scss";
 
-export const BookItem = ({ book }) => {
+export const BookItem = ({ book }: { book: any}) => {
   const navigate = useNavigate();
 
   return (
